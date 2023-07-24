@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://b56ipevoidn3y"]
+
+[ext_resource type="Script" path="res://Editor.gd" id="1_33q2i"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_t42w5"]
+
+[node name="Editor" type="Node3D"]
+script = ExtResource("1_33q2i")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.523727, 0)
+mesh = SubResource("BoxMesh_t42w5")
+
+[node name="CameraRig" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Inner" type="Node3D" parent="CameraRig"]
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig/Inner"]
+transform = Transform3D(1, 1.09084e-08, 4.07107e-08, -2.79983e-08, 0.893927, 0.448211, -3.15032e-08, -0.448211, 0.893928, 1.78814e-07, 3, 3)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.687658, 0.574177, -0.444351, 0, 0.612024, 0.790839, 0.726035, -0.543827, 0.420863, 0.59778, 5.35424, 6.81632)
